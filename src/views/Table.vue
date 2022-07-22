@@ -10,6 +10,7 @@
                             <th scope="col">First</th>
                             <th scope="col">Last</th>
                             <th scope="col">Username</th>
+                            <th scope="col">#</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -17,7 +18,7 @@
                             <th scope="row">{{data.id}}</th>
                             <td>{{data.firstName}}</td>
                             <td>{{data.lastName}}</td>
-                            <td>{{data.username}}</td>
+                            <td><button class="btn btn-danger" @click="removeData(data.id)">X</button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -102,12 +103,19 @@
                     lastName: this.lastName,
                     username: this.username
                     };
-                    this.idData++
-                    this.isValidate = false
-                    this.terms = 'off'
+                    this.idData++;
                     this.dataTables.push(this.tempData);
+                    //this.terms = 'off';
+                    this.isValidate = false;
+                    this.firstName = '';
+                    this.lastName = '';
                 }
                 
+            },
+            removeData(id){
+                this.dataTables.splice(this.dataTables.findIndex(function(i){
+                    return i.id === id;
+                }), 1);
             }
         },
 
