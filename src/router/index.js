@@ -23,6 +23,13 @@ const routes = [
     component: function () {
       return import('../views/Contact.vue')
     }
+  },
+  {
+    path: '/table',
+    name: 'TableLocal',
+    component: function () {
+      return import('../views/Table.vue')
+    }
   }
 ]
 

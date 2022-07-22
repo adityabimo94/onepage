@@ -39,6 +39,14 @@
                         </router-link>
     
                     </li>
+
+                    <li class="nav-item">
+    
+                        <router-link to="/table" custom v-slot="{ navigate, href }">
+                            <a class="nav-link" :href="href" @click="navigate">Table</a>
+                        </router-link>
+    
+                    </li>
     
                 </ul>
     
