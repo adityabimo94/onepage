@@ -30,7 +30,14 @@ const routes = [
     component: function () {
       return import('../views/Table.vue')
     }
-  }
+  },
+  {
+    path: '/pokemon',
+    name: 'Pokemon',
+    component: function () {
+      return import('../views/Pokemon.vue')
+    }
+  },
 ]
 
 const router = createRouter({

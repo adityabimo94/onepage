@@ -47,6 +47,14 @@
                         </router-link>
     
                     </li>
+
+                    <li class="nav-item">
+    
+                        <router-link to="/pokemon" custom v-slot="{ navigate, href }">
+                            <a class="nav-link" :href="href" @click="navigate">Pokemon</a>
+                        </router-link>
+    
+                    </li>
     
                 </ul>
     
