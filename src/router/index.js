@@ -38,6 +38,13 @@ const routes = [
       return import('../views/Pokemon.vue')
     }
   },
+  {
+    path: '/pinia',
+    name: 'Pinia',
+    component: function () {
+      return import('../views/TodoForm.vue')
+    }
+  },
 ]
 
 const router = createRouter({

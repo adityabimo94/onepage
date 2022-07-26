@@ -48,10 +48,19 @@
     
                     </li>
 
+
+                    <li class="nav-item">
+    
+                        <router-link to="/pinia" custom v-slot="{ navigate, href }">
+                            <a class="nav-link" :href="href" @click="navigate">Pinia</a>
+                        </router-link>
+    
+                    </li>
+
                     <li class="nav-item">
     
                         <router-link to="/pokemon" custom v-slot="{ navigate, href }">
-                            <a class="nav-link" :href="href" @click="navigate">Pokemon</a>
+                            <a class="nav-link" :href="href" @click="navigate">Fetch</a>
                         </router-link>
     
                     </li>
